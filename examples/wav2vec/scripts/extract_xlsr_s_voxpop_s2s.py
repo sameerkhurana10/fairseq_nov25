@@ -52,7 +52,7 @@ class Wav2VecFeatureReader(object):
 
             m_res = self.model(source=source)
             audio_embed = m_res["encoder_out"].squeeze(1).t()
-            audio_embed = F.adaptive_avg_pool1d(audio_embed, 1)
+            audio_embed = F.adaptive_avg_pool1d(audio_embed, 1).t()
             audio_embed = F.normalize(audio_embed, p=2).squeeze()
             return audio_embed.cpu()
 

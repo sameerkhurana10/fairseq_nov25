@@ -1,0 +1,11 @@
+#!/bin/bash
+
+tsv=$1
+nj=$2
+JOB=$3
+feats=$4
+ckpt=$5
+
+module load libsndfile
+
+/gpfswork/rech/iqh/upp27cx/conda-envs/fair_nov25/bin/python examples/wav2vec/scripts/extract_xlsr/extract_xlsr_mustc.py ${tsv} $nj $JOB ${feats} ${ckpt}

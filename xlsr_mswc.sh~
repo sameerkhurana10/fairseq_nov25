@@ -1,0 +1,5 @@
+#!/bin/bash
+
+module load 
+
+python examples/wav2vec/scripts/extract_xlsr/extract_xlsr_mswc.py ~/code/espnet/egs2/commonvoice/asr1/dump/raw/org/mswc_en/wav.scp ~/code/espnet/egs2/commonvoice/asr1/dump/raw/org/mswc_en/wrd2utt /gpfsscratch/rech/iqh/upp27cx/w2v2_audio_text_embedding/mswc_xlsr_300M_full_ft/max_update__400000-lr__\[0.0001\]-freeze_updates__0/checkpoints/checkpoint_5_228000.pt 400 0 /linkhome/rech/genofv01/upp27cx/code/espnet/egs2/commonvoice/asr1 /gpfsscratch/rech/iqh/upp27cx/mswc/xlsr_embeds/en
